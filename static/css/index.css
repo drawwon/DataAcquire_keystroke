@@ -1,0 +1,124 @@
+/*body{*/
+    /*background: url("../pics/background.jpg") center 50%;*/
+/*}*/
+html,body{
+    height: 100%;
+}
+.school_logo{
+    width: 378px;
+    height: 101px;
+    float: left;
+}
+.modal-title{
+    text-align: center;
+}
+
+.logo>img {
+    margin: 0 auto;
+    height: 52px;
+    position: relative;
+    top: -5px;
+}
+
+.btn-font1{
+    width: auto;
+    font-size: 30px;
+    margin: 30px auto;
+    display: table;
+    color: #ffffff;
+    background: #376EB4;
+    border-color: #376EB4;
+    font-weight: bold;
+    box-shadow: 2px 2px 1px 0 rgba(0,34,49,0.08);
+
+}
+
+.btn-font2{
+    width: auto;
+    font-size: 30px;
+    margin: 40px auto;
+    display: table;
+    color: blue;
+    background: #f7ecb5;
+    border-color: #376EB4;
+    font-weight: bold;
+    box-shadow: 2px 2px 1px 0 rgba(0,34,49,0.08);
+
+}
+
+.bottom-containner{
+    width: auto;
+    margin: 0 auto;
+}
+
+.btn-group-mine{
+    width: 100%;
+    margin: 0 auto;
+
+}
+.full-width{
+    width: 100%;
+}
+.full-height{
+    height: 100% !important;
+}
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #f0f0f0;
+    color: inherit;
+}
+.header{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 800;
+    -webkit-transition: background 0.4s ease, height 0.4s ease;
+    transition: background 0.4s ease, height 0.4s ease;
+}
+
+.fr{
+    float:right!important;
+}
+.registerbtn {
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 10px;
+    background: #fff;
+    color: #2c2c2c;
+    margin-left: 2px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px 0 rgba(0,34,49,0.08);
+    font-weight: bold;
+}
+.loginbtn {
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 10px;
+    background: #fff;
+    color: #2c2c2c;
+    margin-left: 2px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px 0 rgba(0,34,49,0.08);
+    font-weight: bold;
+}
+
+/*.loginbtn:hover {*/
+    /*background: #4FB137;*/
+/*}*/
+/*.registerbtn:hover {*/
+    /*background: #4FB137;*/
+/*}*/

@@ -1,0 +1,2 @@
+class InvalidKeystrokeException(Exception):
+    pass

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西安交通大学人机交互数据采集平台</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/pc_data_mouse.css">
+
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <div class="border-top container-fluid">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+        <div class="bottom fr" id="fr">
+            <a class="fl mar10_font" id="username_a">{{ request.session.username }}</a>
+            <img id="head_image" width="20" height="20" src="../static/pics/default_big_14.png"/>
+            <a class="fr mar10_font" id="logout_a" href="/logout/">退出</a>
+        </div>
+        <!--登录后跳转-->
+        {#        <a class="fr registerbtn" href="{% url 'register' %}">注册</a>#}
+        {#        <a class="fr loginbtn" href="{% url 'login' %}">登录</a>#}
+    </div>
+
+{% else %}
+    <div class="container-fluid border-top">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+        <!--登录后跳转-->
+        <a class="fr btn btn-outline-secondary mybtn_top" href="{% url 'register' %}">注册</a>
+        <a class="fr btn btn-secondary mybtn_top" href="{% url 'login' %}">登录</a>
+    </div>
+{% endif %}
+
+
+<script src="../static/js/pc_data_mouse.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

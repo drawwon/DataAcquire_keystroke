@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人机交互数据采集平台</title>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/clientPageScript.js"></script>
+    <script src="../static/js/keyStrokeAuthService.js"></script>
+{#    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">#}
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/pc_data.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <div class="container header">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+        <dl class="fr" id="fr">
+            {#                <img class="down fr" src="/static/pics/top_down.png"/></dd>#}
+        </dl>
+
+        <div class="bottom fr" id="fr">
+            <a class="fl" id="username_a">{{ request.session.username }}</a>
+            <img id="head_image" width="20" height="20" src="/static/pics/default_big_14.png"/>
+            <a class="fr" id="logout_a" href="/logout/">退出</a>
+        </div>
+        <!--登录后跳转-->
+        {#        <a class="fr registerbtn" href="{% url 'register' %}">注册</a>#}
+        {#        <a class="fr loginbtn" href="{% url 'login' %}">登录</a>#}
+    </div>
+
+{% else %}
+    <div class="container header">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+    </div>
+    <div class="container header">
+        <!--登录后跳转-->
+        <a class="fr registerbtn" href="{% url 'register' %}">注册</a>
+        <a class="fr loginbtn" href="{% url 'login' %}">登录</a>
+    </div>
+{% endif %}
+
+<div class="c-box bg-box" id="pc_data_form_div">
+    <form id="registerForm">
+        <div class="login-box" id="h1_head_mar100">
+            <h1 id="ith-login">第1/10次登陆</h1>
+        </div>
+        <div class="center_div form-box" id="form_box_pc">
+            <div style="padding-bottom: 50px">
+            </div>
+
+            <div class="tab-form">
+                <div class="form-group marb8">
+                    <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+                    <input type="text" id="id_username" name="username" placeholder="请输入您的邮箱" autocomplete="off"/>
+                </div>
+                <div class="form-group marb8 ">
+                    <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                    <input type="password" id="id_password" name="password" autocomplete="new-password"
+                           placeholder="请输入6-20位非中文字符密码"/>
+                </div>
+                <div class="error btns" id="jsEmailTips">
+                    {% for key,value in pc_form.errors.items %}
+                        {{ value }}
+                    {% endfor %}
+                    {{ msg }}
+                </div>
+                <div class="auto-box marb8">
+                </div>
+                <button class="btn btn-green" id="jsEmailRegBtn" type="submit" value="登录">登录</button>
+                {#                        <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy'/>#}
+                {#                {% csrf_token %}#}
+
+                {#            </form>#}
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+{#<script language="JavaScript">#}
+    {#document.getElementById('jsEmailRegBtn').onclick = function () {#}
+    {#    /*====================django ajax ======*/#}
+    {#    jQuery(document).ajaxSend(function (event, xhr, settings) {#}
+    {#        function getCookie(name) {#}
+    {#            var cookieValue = null;#}
+    {#            if (document.cookie && document.cookie !== '') {#}
+    {#                var cookies = document.cookie.split(';');#}
+    {#                for (var i = 0; i < cookies.length; i++) {#}
+    {#                    var cookie = jQuery.trim(cookies[i]);#}
+    {#                    // Does this cookie string begin with the name we want?#}
+    {#                    if (cookie.substring(0, name.length + 1) === (name + '=')) {#}
+    {#                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));#}
+    {#                        break;#}
+    {#                    }#}
+    {#                }#}
+    {#            }#}
+    {#            return cookieValue;#}
+    {#        }#}
+    {##}
+    {#        function sameOrigin(url) {#}
+    {#            // url could be relative or scheme relative or absolute#}
+    {#            var host = document.location.host; // host + port#}
+    {#            var protocol = document.location.protocol;#}
+    {#            var sr_origin = '//' + host;#}
+    {#            var origin = protocol + sr_origin;#}
+    {#            // Allow absolute or scheme relative URLs to same origin#}
+    {#            return (url === origin || url.slice(0, origin.length + 1) === origin + '/') ||#}
+    {#                (url === sr_origin || url.slice(0, sr_origin.length + 1) === sr_origin + '/') ||#}
+    {#                // or any other URL that isn't scheme relative or absolute i.e relative.#}
+    {#                !(/^(\/\/|http:|https:).*/.test(url));#}
+    {#        }#}
+    {##}
+    {#        function safeMethod(method) {#}
+    {#            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));#}
+    {#        }#}
+    {##}
+    {#        if (!safeMethod(settings.type) && sameOrigin(settings.url)) {#}
+    {#            xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));#}
+    {#        }#}
+    {#    });#}
+    {#    /*===============================django ajax end===*/#}
+{##}
+{#    var username = $('#id_username').val();#}
+{#    var password = $('#id_password').val();#}
+{#    console.log(username);#}
+{#    document.getElementById('registerForm').onsubmit = function () {#}
+{#    $.ajax({#}
+{#        type: "POST",#}
+{#        async: true,//取消异步 否则flage复制失败#}
+{#        url: "{% url 'pc_data' %}",#}
+{#        datatype: "json",#}
+{#        data: {'username': username, 'password': password},#}
+{#        // 访问完成后执行的方法#}
+{#        success: function (data) {#}
+{#            console.log(data);#}
+{#            if (data === 'false') {#}
+{#                var $jsLoginTips = $('#jsEmailTips');#}
+{#                $jsLoginTips.html("账号或者密码错误，请重新输入").hide();#}
+{#                setTimeout("var $jsLoginTips = $('#jsEmailTips');$jsLoginTips.html(\"账号或者密码错误，请重新输入\").show();", 200);#}
+{#            }#}
+{##}
+{#            else {#}
+{#                var $jsLoginTips = $('#jsEmailTips');#}
+{#                $jsLoginTips.html("账号或者密码错误，请重新输入").hide();#}
+{#                var intext = document.getElementById('ith-login').innerText;#}
+{#                //console.log('inner:'+intext);#}
+{#                var regex = /(\d{1,2})\//g;#}
+{#                var i = regex.exec(intext)[1];#}
+{#                i = parseInt(i) + 1;#}
+{#                document.getElementById('ith-login').innerText = '第' + i + "/10次登录";#}
+{#                document.getElementById('id_username').value = '';#}
+{#                document.getElementById('id_password').value = '';#}
+{##}
+{#                if (i === 10) {#}
+{#                    setTimeout("alert('训练完成')", 1000)#}
+{##}
+{#                }#}
+{##}
+{#                //console.log(i);#}
+{#            }#}
+{#        }#}
+{#    });}#}
+{#</script>#}
