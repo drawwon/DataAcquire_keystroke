@@ -1,5 +1,6 @@
 ## DataAcquire_keystroke
 ![](https://img.shields.io/badge/language-Python-orange.svg)
+![](https://img.shields.io/badge/license-MIT-000000.svg)
 
 Django keystroke dataAcquire for XJTU MOE Key Labratory.
 
