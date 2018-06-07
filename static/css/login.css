@@ -58,6 +58,7 @@ a:hover {
 }
 
 .login-box {
+    position: relative;
     width: 853px;
     margin: 15px auto;
 }
@@ -629,7 +630,7 @@ a:hover {
     background: url(/static/pics/school_logo_only.png) no-repeat center top;
     background-size: 150px auto;
     height: 120px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 9px;
 }
 
@@ -646,3 +647,17 @@ a:hover {
     /*line-height: 30px;*/
     /*cursor: pointer;*/
 /*}*/
+#tab_register{
+    height: 54px;
+    line-height: 54px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#back_to_index{
+    margin-right: 240px;
+    margin-bottom: 30px;
+}
