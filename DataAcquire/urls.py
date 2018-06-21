@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import re_path,include
 from django.views.generic import TemplateView
-from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,PcDataView,PcDataMouseView
+from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,PcDataView,PcDataMouseView,MoboileDataView
 from django.conf.urls import url
 from django.conf import settings
 from django.contrib.auth.views import logout
@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^logout/$', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
     url(r'^pc_data_keystroke/$',PcDataView.as_view(),name='pc_data'),
     url(r'^pc_data_mouse/$',PcDataMouseView.as_view(),name='pc_data_mouse'),
+    url(r'mobile_data',MoboileDataView.as_view(),name='mobile_data'),
 
     url(r'^server/register_keystroke/$',register_keystroke,name='register_keystroke')
 ]

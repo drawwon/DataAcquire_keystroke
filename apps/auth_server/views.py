@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 import json,re
-from auth_server.models import KeyStroke,Mouse
+from auth_server.models import KeyStroke,Mouse,MobileData
 
 from utils.response_statuses import RESPONSE,RESPONSE_STATUS
 from utils.custom_exceptions import InvalidKeystrokeException
@@ -57,6 +57,7 @@ def register_keystroke(request):
             keystroke_data.save()
 
             return JsonResponse(RESPONSE['SUCCESS'])
+
     elif re.search('pc_data_mouse',request.META['HTTP_REFERER']):
         data = json.loads(request.body)
         cor_data = data['mouse_xy']
@@ -73,6 +74,24 @@ def register_keystroke(request):
         return HttpResponse('success')
         # return JsonResponse(RESPONSE['SUCCESS'])
         # return HttpResponse('true')
+
+    elif re.search('mobile_data',request.META['HTTP_REFERER']):
+        data = json.loads(request.body)
+        user = User.objects.get(username=request.user.username)
+        acc_data = data['acc_data']
+        gyroscope_data = data['gyroscope_data']
+        timestamps = data['timestamps']
+
+
+        mobile_data = MobileData()
+        mobile_data.user = user
+        mobile_data.gyroscope_data = gyroscope_data
+        mobile_data.acc_data = acc_data
+        mobile_data.timestamps = timestamps
+
+        mobile_data.save()
+        return HttpResponse('success')
+
 
     else:
         return HttpResponse('false')

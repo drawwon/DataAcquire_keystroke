@@ -37,7 +37,7 @@ function append_button(width, height) {
     alertNode.style.top = y;
     $('body').append(alertNode);
     console.log(i);
-    if (i < 15) {
+    if (i < 3) {
         document.getElementById('alert').addEventListener('click', getAnotherButton);
     }
     else {
@@ -120,7 +120,7 @@ function showFinish() {
             // $('.container-fluid').after(alertNode);
             const moreAnimation = `
 <div class="space">
-<div class="center_alert"><h1 style="text-align: center"><p>你已完成所有训练项目</p><p>感谢您的参与!</p></h1></div>
+<div class="center_alert"><h1 style="text-align: center;color: #fff;margin-top: 10%"><p>你已完成所有训练项目</p><p>感谢您的参与!</p></h1></div>
   <div class="ship">
     <div class="ship-rotate">
       <div class="pod"></div>

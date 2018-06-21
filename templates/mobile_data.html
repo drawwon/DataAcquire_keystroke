@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>移动端数据采集</title>
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/mobile.css">
+    <script src="/static/js/jquery.min.js"></script>
+
+</head>
+<body>
+<header>
+{% if request.user.is_authenticated %}
+    <div class="border-top container-fluid">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+        <div class="bottom fr" id="fr_div">
+            <a class="fl mar10_font" id="username_a">{{ request.session.username }}</a>
+            <img id="head_image" width="20" height="20" src="../static/pics/default_big_14.png"/>
+            <a class="fr mar10_font" id="logout_a" href="/logout/">退出</a>
+        </div>
+        <!--登录后跳转-->
+        {#        <a class="fr registerbtn" href="{% url 'register' %}">注册</a>#}
+        {#        <a class="fr loginbtn" href="{% url 'login' %}">登录</a>#}
+    </div>
+
+{% else %}
+    <div class="container-fluid border-top">
+        <img class="school_logo" src="../static/pics/school_logo.png">
+        <!--登录后跳转-->
+        <a class="fr btn btn-outline-secondary mybtn_top" href="{% url 'register' %}">注册</a>
+        <a class="fr btn btn-secondary mybtn_top" href="{% url 'login' %}">登录</a>
+    </div>
+{% endif %}
+</header>
+
+<div class="container">
+
+</div>
+
+<script src="/static/js/mobile.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/carousel-swipe.js"></script>
+
+</body>
+</html>

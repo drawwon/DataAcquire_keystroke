@@ -109,13 +109,13 @@ class KeyStrokeAuthService {
             var regex = /(\d{1,2})\//g;
             var i = regex.exec(intext)[1];
             i = parseInt(i) + 1;
-            if (i <= 10) {
+            if (i <= 1) {
                 document.getElementById('ith-login').innerText = '第' + i + "/10次登录";
             }
             document.getElementById('id_username').value = '';
             document.getElementById('id_password').value = '';
 
-            if (i === 11) {
+            if (i === 2) {
                 // setTimeout("alert('训练完成')", 1000)
                 var form = document.getElementById('registerForm');
                 $("#registerForm").fadeOut(1500);

@@ -42,6 +42,10 @@ class LoginView(View):
         else:
             return render(request,'login.html',{'login_form':login_form})
 
+class MoboileDataView(View):
+    def get(self, request):
+        return render(request, 'mobile_data.html', {})
+
 class PcDataMouseView(View):
     def get(self, request):
         return render(request, 'pc_data_mouse.html', {})
