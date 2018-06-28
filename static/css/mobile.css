@@ -29,7 +29,9 @@ p img{
     margin: 10px auto;
 }
 
-
+#carouselDemo{
+    margin-top: 100px;
+}
 
 .space {
     position: absolute;

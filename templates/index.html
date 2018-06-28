@@ -55,11 +55,11 @@
         </div>
 
         <div class="bottom-containner container">
-            <button type="button" onclick="newwin()" class="btn-font1 btn btn-default" id="but1" href="{% url 'pc_data' %}">电脑端击键数据采集</button>
+            <button type="button" onclick="newwin_pc()" class="btn-font1 btn btn-default" id="but1" href="{% url 'pc_data' %}">电脑端击键数据采集</button>
         </div>
 
         <div class="bottom-containner container">
-            <a type="button" class="btn-font2 btn btn-default" id="but2" href="/mobile_data">手机sensor数据采集</a>
+            <a type="button" class="btn-font2 btn btn-default" id="but2" onclick="newwin_mobile()">手机sensor数据采集</a>
         </div>
     </div>
 </section>
@@ -67,9 +67,17 @@
     var but1 = document.getElementById('but1');
     var but2 = document.getElementById('but2');
 
-    function newwin() {
+    function newwin_pc() {
         if('{{ request.user.is_authenticated }}' === 'True'){
             window.open("{% url 'pc_data' %}");
+        }
+        else {
+            alert('请先登录');
+        }
+    }
+    function newwin_mobile() {
+        if('{{ request.user.is_authenticated }}' === 'True'){
+            window.open("{% url 'mobile_data' %}");
         }
         else {
             alert('请先登录');

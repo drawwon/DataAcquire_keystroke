@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import xadmin
 from django.contrib import admin
 from django.urls import re_path,include
 from django.views.generic import TemplateView
@@ -22,10 +23,15 @@ from django.conf import settings
 from django.contrib.auth.views import logout
 from auth_server.views import register_keystroke
 
+xadmin.autodiscover()
 
+# version模块自动注册需要版本控制的 Model
+from xadmin.plugins import xversion
+xversion.register_models()
 
 urlpatterns = [
-    re_path('^admin/', admin.site.urls),
+    # re_path('^xadmin/', xadmin.site.urls),
+    url(r'^xadmin/', xadmin.site.urls),
     re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     re_path(r'^register/', RegisterView.as_view(), name='register'),
     re_path(r'^login/', LoginView.as_view(), name='login'),

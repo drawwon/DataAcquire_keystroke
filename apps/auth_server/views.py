@@ -78,16 +78,24 @@ def register_keystroke(request):
     elif re.search('mobile_data',request.META['HTTP_REFERER']):
         data = json.loads(request.body)
         user = User.objects.get(username=request.user.username)
-        acc_data = data['acc_data']
-        gyroscope_data = data['gyroscope_data']
-        timestamps = data['timestamps']
+        acc_datas = data['acc_datas']
+        acc_with_gravitys = data['acc_with_gravitys']
+        rot_rates = data['rot_rates']
+        acc_angle = data['acc_angle']
+        touch_data = data['touch_data']
+
+        print(touch_data)
 
 
         mobile_data = MobileData()
         mobile_data.user = user
-        mobile_data.gyroscope_data = gyroscope_data
-        mobile_data.acc_data = acc_data
-        mobile_data.timestamps = timestamps
+        mobile_data.user_name = user.username
+
+        mobile_data.touch_data = touch_data
+        mobile_data.acc_datas = acc_datas
+        mobile_data.acc_with_gravitys = acc_with_gravitys
+        mobile_data.rot_rates = rot_rates
+        mobile_data.acc_angle = acc_angle
 
         mobile_data.save()
         return HttpResponse('success')

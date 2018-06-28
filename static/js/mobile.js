@@ -6,6 +6,7 @@ const news3 = `<article class="article padding-side"><div class="article__header
 const news4 = `<article class="article padding-side"><div class="article__header new-style-test-article__header"><h1 class="article__title">挪用公款打赏女主播的钱该不该追缴？“消费”还是“赠予”引争议</h1></div><div class="article__content" style="height: auto;"><div><p>近日，“男会计挪用公款930万，766万用于打赏女主播”的新闻引发社会关注。女主播该不该退还打赏的钱款呢？有法律界人士认为，打赏主播属于消费行为，钱款是主播的劳动报酬，不应退还，但记者采访了中国政法大学副教授朱巍和律师许浩，他们都认为，打赏主播属于赠与行为，并非女主播善意取得，这笔赃款应当予以追缴，不仅主播要退钱，平台也应当退钱。</p><div class="pgc-img"><p class="img-wrapper-embedded" style="width: 100%; min-height: 280.662px;"><img src="https://p3.pstatp.com/large/pgc-image/15294837756268263d460dc" img_width="680" img_height="550" inline="0" alt="挪用公款打赏女主播的钱该不该追缴？“消费”还是“赠予”引争议" onerror="javascript:errorimg.call(this);" data-index="0" data-src="https://p3.pstatp.com/large/pgc-image/15294837756268263d460dc" style="opacity: 1;"></p></div><p>有的法律界人士认为，本案中的男会计通过充值兑换虚拟货币，然后购买“礼物”打赏主播，属于买卖交易行为。网络直播作为一种新兴行业，女主播通过付出特定的劳动，获得观看表演粉丝的打赏，是其合法收入。据此，这一观点认为，如果主播在不知道钱款来源的情况下，没有业务审查，打赏的钱款属于女主播提供合法的直播服务时取得的相应的劳动报酬，女主播是善意第三人，不应该退还。</p><p>但中国政法大学传播法中心副主任朱巍认为，打赏行为算不上买卖行为，应属于赠与行为，因为所谓的网络直播中的“表演”，80%都是头部直播，坐着不动，只是聊聊天，而且不是针对一个人的聊天。“粉丝斥巨资充值买虚拟货币，极少人是为了付费看‘表演’。”</p><p>北京市京师律师事务所律师许浩也认为，不管这笔钱是赠与还是买卖，本案首先是一个刑事案件，该不该退还，应该按刑法和刑诉法来解决。“人已判刑，钱要追缴。”</p><p>朱巍表示，“根据刑法的规定，对犯罪分子违法所得的一切财物，应当予以追缴或者责令退赔。本案中，打赏的钱属于赃款，如果平台也有抽成，二者都须退还。”</p><p>许浩说，《最高人民法院关于刑事裁判涉财产部分执行的若干规定》第11条的规定，被执行人将刑事裁判认定为赃款赃物的涉案财物用于清偿债务、转让或者设置其他权利负担，具有下列情形之一的，人民法院应予追缴：（一）第三人明知是涉案财物而接受的；（二）第三人无偿或者以明显低于市场的价格取得涉案财物的；（三）第三人通过非法债务清偿或者违法犯罪活动取得涉案财物的；（四）第三人通过其他恶意方式取得涉案财物的。第三人善意取得涉案财物的，执行程序中不予追缴。</p><p>“很明显，本案中的女主播适用上述第二种情形中的无偿取得，应予以追缴。”许浩说，“善意取得的一个核心要素，是支付了合理对价，但是，在网络直播中，主播表演的内容还不如一场几十元的电影。”</p><p>作为研究网络直播，并参与网络直播法规制定的专家之一，朱巍还提到，某些主播的收入畸高，其中不仅包括了线上打赏的钱款，还包括了线下的打赏，“这其中既有纳税的问题，还暗含着线上表演转化为线下卖淫的问题，成了‘互联网+色情’，这对社会的危害是很大的。”</p><p>不仅认为本案中女主播应该退还赃款，朱巍还认为，未成年人事前没有得到家长的授权，事后没有得到家长的认可的打赏钱款也应该退还。</p></div></div></article>`;
 const news5 = `<article class="article padding-side"><div class="article__header new-style-test-article__header"><h1 class="article__title">中兴禁令解除在美国参议院遇阻，中兴连续跌停，贸易局势引担忧</h1></div><div class="article__content" style="height: auto;"><div><div class="pgc-img"><p class="img-wrapper-embedded" style="width: 100%; min-height: 239.661px;"><img src="https://p3.pstatp.com/large/pgc-image/15294738027871e0b8697b3" img_width="750" img_height="518" inline="0" alt="中兴禁令解除在美国参议院遇阻，中兴连续跌停，贸易局势引担忧" onerror="javascript:errorimg.call(this);" data-index="0" data-src="https://p3.pstatp.com/large/pgc-image/15294738027871e0b8697b3" style="opacity: 1;"></p></div><p>摘要：但特朗普仍有机会劝说议员们放中兴一条「生路」。</p><p>6 月 18 日，美国参议院以 85:10 通过了《国防授权法案》（NDAA），其中包括恢复中兴通讯与美国供应商的交易禁令——禁止中兴通讯购买美国零部件、软件、技术。这是共和党领导的参议院为数不多的否决特朗普政府的决定之一。目前这次「反转」是否会生效，结局还尚不明了。此前已出台的众议院版本的 NDAA 并不包含该恢复中兴通讯禁令条款，所以两项提案的最终版必须由两院商议通过，并由特朗普签署成为法律。特朗普一直希望解除禁令，但是其已无否决权。</p><p>两党议员称中兴通讯威胁国家安全，要求立即停止与其交易。联合声明中，共和党员 Marco Rubio，Tom Cotten，民主党员 Chuck Schumer，Chris Hollen 表示：「令我们欣慰的是，两党都明确表示应该把国家就业和安全放在首位，这理应比跟中国合作重要。」</p><div class="pgc-img"><p class="img-wrapper-embedded" style="width: 100%; min-height: 231.333px;"><img src="https://p3.pstatp.com/large/pgc-image/15294738034177b8c598727" img_width="750" img_height="500" inline="0" alt="中兴禁令解除在美国参议院遇阻，中兴连续跌停，贸易局势引担忧" onerror="javascript:errorimg.call(this);" data-index="1" data-src="https://p3.pstatp.com/large/pgc-image/15294738034177b8c598727" style="opacity: 1;"></p></div><p>中兴禁令可以追溯到更早，美国商务部在 4 月 16 日宣布，未来 7 年内禁止美国公司向中国销售零部件，理由为中兴通讯违反了美国的制裁条款——禁止向伊朗和朝鲜出售美国商品和技术。而在去年，中兴通讯承认其违反了制裁规定，当时中兴通讯与美国商务部达成协议：中国将会处罚参与交易的中兴员工。但美国商务部表示，中兴通讯未能维持协议，只解雇了 4 名高级职员，未减少其余 35 名员工的奖金。美国商务部长 Wilbur Ross 对中兴通讯非处罚仍奖励的做法表示不可容忍。</p><p>禁令一出，17 日，中兴 A 股、H 股双双停牌。中兴也随即成立了危机小组，全面评估此事造成的影响并积极与各方沟通。</p><p>5 月 13 日，特朗普发 Twitter 称：着手为中兴通讯提供快速「重启」的方案，对中兴的制裁使太多中国人丢掉了工作，中兴事件迎来转机。6 月 8 日，美国商务部发声明表示与中兴达成解除禁令的协议。根据新的协议，中兴需要达成以下三点：需要支付 14 亿美金罚款，其中包括 4 亿美金的「保证金」，以免类似违规再次发生；美国选定合规官员进驻中兴，为期 10 年；中兴还需要在未来 30 天内更换管理层。</p><p>中兴作为美国智能手机市场的第四大厂商，美国的芯片厂商也不会轻易地放弃中国市场。法案生效之前，特朗普仍有机会劝说议员在最终法律中删除对中兴通讯的销售禁令。</p><p>受此影响，处于「困境」中的中兴通讯港股 6 月 19 日收跌 24.81%，报价 9.85 港元每股，6 月 13 日复牌以来累计下跌超过 60%。而更大的麻烦在于中兴关系着全球最大的两个经济体之间的贸易局势，在特朗普威胁对 2000 亿美元的中国商品征收新关税后，中美贸易关系紧张升级再度引发担忧。</p><div class="pgc-img"><p class="img-wrapper-embedded" style="width: 100%; min-height: 230.871px;"><img src="https://p3.pstatp.com/large/pgc-image/1529473802445ca15ed82c0" img_width="750" img_height="499" inline="0" alt="中兴禁令解除在美国参议院遇阻，中兴连续跌停，贸易局势引担忧" onerror="javascript:errorimg.call(this);" data-index="2" data-src="https://p3.pstatp.com/large/pgc-image/1529473802445ca15ed82c0" style="opacity: 1;"></p></div><p>根据第一财经报道，中国的芯片市场需求占全球 50% 以上，而 90% 依赖于进口，国产芯片只能自供 8%。中国企业在芯片设计、制造等方面存在短板。中兴不是「特例」，中兴所面临的困境，是中国电子通信行业需要面对的共同挑战。对此，中国企业唯有掌握核心技术，才能经受得住外界的打击。</p></div></div></article>`;
 
+var acc_angle = [];
 document.addEventListener('DOMContentLoaded', () => {
     const alert_begin = `<center id="alert_center"><h2>接下来你将阅读五篇文章并浏览3张图片<h2><button id="alert_button" class="btn btn-primary"><h3>点击开始采集数据</h3></button></center>`
     const alert_begin_node = $.parseHTML(alert_begin);
@@ -17,14 +18,36 @@ document.addEventListener('DOMContentLoaded', () => {
         $(alert_begin_node).fadeOut(500, () => {
             $(alert_begin_node).remove();
             body.append($.parseHTML(next_button));
-            toNextNews(news1);
-
-
+            toNextNews();
+            window.addEventListener("deviceorientation", handleOrientation, true);
+            window.addEventListener("devicemotion", handleMotion, true);
+            window.addEventListener('touchstart', handleTouchStart, false);
+            window.addEventListener('touchend', handleTouchEnd, false);
         });
     });
 
 
 });
+
+var startX, startY, touchBeginTime;
+
+function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    touchBeginTime = new Date().getTime();
+}
+
+var endX, endY, touchEndTime, deltaTime;
+var touch_data = [];
+
+function handleTouchEnd(e) {
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+    touchEndTime = new Date().getTime();
+    deltaTime = touchEndTime - touchBeginTime;
+    touch_data.push([startX, startY, touchBeginTime, endX, endY, touchEndTime]);
+
+}
 
 function toNextNews() {
     const body = $('.container');
@@ -43,6 +66,31 @@ function toNextNews() {
     $('html,body').scrollTop(0);
 
 
+}
+
+function handleOrientation(event) {
+    // var absolute = event.absolute;
+    var alpha = event.alpha;
+    var beta = event.beta;
+    var gamma = event.gamma;
+    var timestamp = new Date().getTime();
+
+    acc_angle.push([alpha, beta, gamma, timestamp]);
+    // acc_angle.push([orientData,timestamp]);
+}
+
+var acc_datas = [];
+var acc_with_gravitys = [];
+var rot_rates = [];
+
+function handleMotion(e) {
+    var timestamp = new Date().getTime();
+    var acc_data = e.acceleration;
+    var acc_with_gravity = e.accelerationIncludingGravity;
+    var rot_rate = e.rotationRate;
+    acc_datas.push([acc_data, timestamp]);
+    acc_with_gravitys.push([acc_with_gravity, timestamp]);
+    rot_rates.push([rot_rate, timestamp]);
 }
 
 function toPics() {
@@ -92,16 +140,45 @@ function toPics() {
         $this.children('.carousel-control').show();
         if ($('.carousel-inner .item:last').hasClass('active')) {
             $this.children('.right.carousel-control').hide();
-            $('#carouselDemo').fadeOut(200, () => {
+            $('#carouselDemo').fadeOut(1000, () => {
                 $('#carouselDemo').remove();
             });
-            setTimeout(()=>{$('body').after(moreAnimationNode)},500)
+            sendRequest('/server/register_keystroke/', {
+                'acc_datas': acc_datas,
+                'acc_with_gravitys': acc_with_gravitys,
+                'rot_rates': rot_rates,
+                'acc_angle': acc_angle,
+                'touch_data': touch_data
+            })
+                .then((res) => {
+                    console.log('res:' + res);
+                    setTimeout(() => {
+                        $('body').after(moreAnimationNode)
+                    }, 1000)
+                });
+
         }
     });
 
 
 }
 
+function sendRequest(url, data) {
+    return new Promise((resolve) => {
+        $.post(
+            url,
+            JSON.stringify(data),
+            (data) => {
+                console.log(data);
+                resolve(data);
+            },
+            'text'
+        ).fail(function () {
+            alert('传输失败，请重新进行手机认证部分测试')
+        });
+    })
+
+}
 
 function addNextButton(news, next_news) {
     const next_button = `<center><button id="alert_button" class="btn btn-primary" onclick=""><h4>点击查看下一条数据</h4></button></center>`;

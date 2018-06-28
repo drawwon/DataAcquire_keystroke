@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'auth_server',
     'xadmin',
     'crispy_forms',
     'captcha',
-    'auth_server'
+    'reversion'
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGOUT_REDIRECT_URL = '/'
 

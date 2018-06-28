@@ -34,9 +34,11 @@ class Mouse(models.Model):
     user_name = models.CharField(max_length=100,blank=True)
 
 class MobileData(models.Model):
-    gyroscope_data = models.TextField(blank=False)
-    acc_data = models.TextField(blank=False)
-    timestamps = models.TextField(blank=False)
+    acc_with_gravitys = models.TextField(blank=False)
+    rot_rates = models.TextField(blank=False)
+    acc_datas = models.TextField(blank=False)
+    acc_angle = models.TextField(blank=False)
+    touch_data = models.TextField(blank=False)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     user_name = models.CharField(max_length=100,blank=True)

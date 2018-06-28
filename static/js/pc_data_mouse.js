@@ -59,19 +59,20 @@ class mouse_data_record {
     constructor() {
         this.pageCoords = [];
         this.pagexy = [];
-        this.time=0;
+        this.time = 0;
         this.timestamps = [];
         var self = this;
-        setInterval(function () {
-            // var pagexy = [];
-            self._getMousePosition(self);
-            // console.log(self.pagexy);
-            if (!(self.pagexy.length === 0)) {
-                self.pageCoords.push(self.pagexy);
-                self.timestamps.push(self.time);
-            }
-            // console.log(self.pageCoords)
-        }, 10);
+        // setInterval(function () {
+        // var pagexy = [];
+        self._getMousePosition(self);
+        // console.log(self.pagexy);
+        // if (!(self.pagexy.length === 0)) {
+        //     self.pageCoords.push(self.pagexy);
+        //     self.timestamps.push(self.time);
+        // }
+        // if (self.pageCoords.length < 10)
+        // {console.log(self.pageCoords)}
+        // }, 1000);
     };
 
     clearTimestamps() {
@@ -82,6 +83,8 @@ class mouse_data_record {
         document.onmousemove = function (e) {
             self.pagexy = [e.pageX, e.pageY];
             self.time = e.timeStamp;
+            self.pageCoords.push(self.pagexy);
+            self.timestamps.push(self.time);
             // pageCoords.push( [e.pageX,e.pageY]);
             // console.log(e.pageX + ", " + e.pageY);//get page coordinates and storing in array
         }
@@ -107,7 +110,7 @@ function getAnotherButton() {
 function showFinish() {
 
     console.log(mouse_data.pageCoords);
-    sendRequest('/server/register_keystroke/', {'mouse_xy': mouse_data.pageCoords,'timestamps':mouse_data.timestamps})
+    sendRequest('/server/register_keystroke/', {'mouse_xy': mouse_data.pageCoords, 'timestamps': mouse_data.timestamps})
         .then((res) => {
             window.clearInterval(id);
             console.log('res:' + res);
