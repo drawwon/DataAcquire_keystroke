@@ -17,10 +17,11 @@ import xadmin
 from django.contrib import admin
 from django.urls import re_path,include
 from django.views.generic import TemplateView
-from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,PcDataView,PcDataMouseView,MoboileDataView
+from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,PcDataView,PcDataMouseView,MoboileDataView,logout_view
 from django.conf.urls import url
+from django.contrib.auth import views as auth_views
 from django.conf import settings
-from django.contrib.auth.views import logout
+# from django.contrib.auth.views import logout
 from auth_server.views import register_keystroke
 
 xadmin.autodiscover()
@@ -37,7 +38,8 @@ urlpatterns = [
     re_path(r'^login/', LoginView.as_view(), name='login'),
     re_path(r'^captcha/', include('captcha.urls')),
     re_path(r'^forget/$', ForgetPwdView.as_view(), name='forget'),
-    url(r'^logout/$', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    # url(r'^logout/$', logout_view, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    url(r'^logout/$', auth_views.LogoutView.as_view(),{'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
     url(r'^pc_data_keystroke/$',PcDataView.as_view(),name='pc_data'),
     url(r'^pc_data_mouse/$',PcDataMouseView.as_view(),name='pc_data_mouse'),
     url(r'mobile_data',MoboileDataView.as_view(),name='mobile_data'),
